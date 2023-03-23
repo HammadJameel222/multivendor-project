@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Repositories\Admin\Auth;
+// namespace App\Repositories\Admin\Auth;
 
-use App\Interfaces\Auth\LoginInterface;
+// use App\Interfaces\Auth\LoginInterface;
 
-class LoginRepository implements LoginInterface
-{
-    public function loginView()
-    {
-        // return view('user.screens.auth.login');
-    }
-}
+// class LoginRepository implements LoginInterface
+// {
+//     public function loginView()
+//     {
+//         return view('user.screens.auth.login');
+//     }
+// }
