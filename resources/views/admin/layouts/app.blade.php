@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Dashboard</title>
+    <title>@yield('title')</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -21,7 +21,7 @@
     <!-- JQVMap -->
     <link rel="stylesheet" href="{{ asset('admin/plugins/jqvmap/jqvmap.min.css') }}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/dist/css/adminlte.min.css') }}">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{ asset('admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <!-- Daterange picker -->
@@ -909,36 +909,31 @@
         <!-- ./wrapper -->
 
         <!-- jQuery -->
-        <script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script>
+        <script src="{{ asset('admin/plugins/jquery/jquery.min.js')}}"></script>
         <!-- jQuery UI 1.11.4 -->
-        <script src="{{ asset('admin/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+        <script src="{{ asset('admin/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
         <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-        {{--  --}}
+        <script>
+          $.widget.bridge('uibutton', $.ui.button)
+        </script>
         <!-- Bootstrap 4 -->
-        <script src="{{ asset('admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('admin/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- ChartJS -->
-        <script src="{{ asset('admin/plugins/chart.js/Chart.min.js') }}"></script>
+        <script src="{{ asset('admin/plugins/chart.js/Chart.min.js')}}"></script>
         <!-- Sparkline -->
-        <script src="{{ asset('admin/plugins/sparklines/sparkline.js') }}"></script>
+        <script src="{{ asset('admin/plugins/sparklines/sparkline.js')}}"></script>
         <!-- JQVMap -->
-        <script src="{{ asset('admin/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
-        <script src="{{ asset('admin/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
-        <!-- jQuery Knob Chart -->
-        <script src="{{ asset('admin/plugins/jquery-knob/jquery.knob.min.js') }}"></script>
-        <!-- daterangepicker -->
-        <script src="{{ asset('admin/plugins/moment/moment.min.js') }}"></script>
-        <script src="{{ asset('admin/plugins/daterangepicker/daterangepicker.js') }}"></script>
+        <script src="{{ asset('admin/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
+        <script src="{{ asset('admin/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
 
-        <!-- Summernote  Text area -->
-        <script src="{{ asset('admin/plugins/summernote/summernote-bs4.min.js') }}"></script>
+        <!-- Summernote -->
+        <script src="{{ asset('admin/plugins/summernote/summernote-bs4.min.js')}}"></script>
         <!-- overlayScrollbars -->
-        <script src="{{ asset('admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+        <script src="{{ asset('admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{ asset('admin/dist/js/adminlte.js') }}"></script>
+        <script src="{{ asset('admin/dist/js/adminlte.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{ asset('admin/dist/js/demo.js') }}"></script>
-        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="{{ asset('admin/dist/js/pages/dashboard.js') }}"></script>
+        <script src="{{ asset('admin/dist/js/demo.js')}}"></script>
         @yield('scripts')
 </body>
 
